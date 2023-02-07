@@ -1353,6 +1353,20 @@ class RazerBladeStealth2019(_MacroKeyboard):
     DEVICE_IMAGE = "https://assets.razerzone.com/eeimages/support/products/1475/1475_bladestealth13(2019).png"
 
 
+class RazerBladeEarly2022Base(_MacroKeyboard):
+    """
+    Class for the Razer Blade Base (Early 2022)
+    """
+    EVENT_FILE_REGEX = re.compile(r'.*Razer_Blade(-if01)?-event-kbd')
+
+    USB_VID = 0x1532
+    USB_PID = 0x027A
+    METHODS = ['get_device_type_keyboard', 'set_static_effect', 'set_spectrum_effect',
+               'set_reactive_effect', 'set_none_effect', 'set_breath_random_effect', 'set_breath_single_effect',
+               'set_breath_dual_effect']
+
+    DEVICE_IMAGE = "https://assets.razerzone.com/eeimages/support/products/1756/blade-15-base-2021-rz09-0369x.png"
+
 class RazerBladeStealthLate2019(_MacroKeyboard):
     """
     Class for the Razer Blade Stealth (Late 2019)
